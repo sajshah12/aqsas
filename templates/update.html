@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block text %}
+<div class="row">
+    <div class="col-sm-6 offset-3">
+        <h2 class="alert alert-info text-center "> update the information</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ for.as_p }}
+            <input type="submit" value="update" class="alert alert-info">
+            <a href="{% url 'add' %}" class="alert alert-info">back home</a>
+        </form>
+    </div>
+</div>
+
+{% endblock text %}
